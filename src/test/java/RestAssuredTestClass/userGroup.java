@@ -76,7 +76,7 @@ public class userGroup extends baseClass {
 
 	@Test(priority = 5)
 	public void assignUserToGroup() {
-		String requestBody = "[5,9]";
+		String requestBody = "[5,9,11]";
 		Response response = RestAssured.given().relaxedHTTPSValidation().header("X-Session-Token", x_session_token)
 				.contentType(ContentType.JSON).body(requestBody).when()
 				.put("https://10.41.4.83:8443/aeengine/rest/tenants/BMC/usergroups/3").then().log().all()
@@ -88,7 +88,7 @@ public class userGroup extends baseClass {
 
 	@Test(dependsOnMethods = {"assignUserToGroup"},priority = 6 )
 	public void unassignGroup() {
-		String requestBody = "[5,9]";
+		String requestBody = "[5,9,11]";
 		Response response = RestAssured.given().relaxedHTTPSValidation().header("X-Session-Token", x_session_token)
 				.contentType(ContentType.JSON).body(requestBody).when()
 				.delete("https://10.41.4.83:8443/aeengine/rest/tenants/BMC/usergroups/3").then().statusCode(200)
