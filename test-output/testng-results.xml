@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-07-17T22:08:13 IST" name="Suite" finished-at="2025-07-17T22:08:28 IST" duration-ms="15783">
+    <groups>
+      <group name="getDetails">
+        <method signature="userGroup.getGroups()[pri:1, instance:RestAssuredTestClass.userGroup@5b247367]" name="getGroups" class="RestAssuredTestClass.userGroup"/>
+      </group> <!-- getDetails -->
+    </groups>
+    <test started-at="2025-07-17T22:08:13 IST" name="Test" finished-at="2025-07-17T22:08:28 IST" duration-ms="15783">
+      <class name="RestAssuredTestClass.userGroup">
+        <test-method is-config="true" signature="setupReport()[pri:0, instance:RestAssuredTestClass.userGroup@5b247367]" started-at="2025-07-17T22:08:12 IST" name="setupReport" finished-at="2025-07-17T22:08:13 IST" duration-ms="614" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupReport -->
+        <test-method is-config="true" signature="authenticateUser()[pri:0, instance:RestAssuredTestClass.userGroup@5b247367]" started-at="2025-07-17T22:08:13 IST" name="authenticateUser" finished-at="2025-07-17T22:08:18 IST" duration-ms="5286" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- authenticateUser -->
+        <test-method signature="getGroups()[pri:1, instance:RestAssuredTestClass.userGroup@5b247367]" started-at="2025-07-17T22:08:18 IST" name="getGroups" finished-at="2025-07-17T22:08:22 IST" duration-ms="4345" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getGroups -->
+        <test-method is-config="true" signature="afterResult(org.testng.ITestResult)[pri:0, instance:RestAssuredTestClass.userGroup@5b247367]" started-at="2025-07-17T22:08:22 IST" name="afterResult" finished-at="2025-07-17T22:08:22 IST" duration-ms="34" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=getGroups status=SUCCESS method=userGroup.getGroups()[pri:1, instance:RestAssuredTestClass.userGroup@5b247367] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterResult -->
+        <test-method is-config="true" signature="authenticateUser()[pri:0, instance:RestAssuredTestClass.userGroup@5b247367]" started-at="2025-07-17T22:08:22 IST" name="authenticateUser" finished-at="2025-07-17T22:08:23 IST" duration-ms="502" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- authenticateUser -->
+        <test-method signature="createUserGroup()[pri:2, instance:RestAssuredTestClass.userGroup@5b247367]" started-at="2025-07-17T22:08:23 IST" name="createUserGroup" finished-at="2025-07-17T22:08:23 IST" duration-ms="513" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createUserGroup -->
+        <test-method is-config="true" signature="afterResult(org.testng.ITestResult)[pri:0, instance:RestAssuredTestClass.userGroup@5b247367]" started-at="2025-07-17T22:08:23 IST" name="afterResult" finished-at="2025-07-17T22:08:23 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=createUserGroup status=SUCCESS method=userGroup.createUserGroup()[pri:2, instance:RestAssuredTestClass.userGroup@5b247367] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterResult -->
+        <test-method is-config="true" signature="authenticateUser()[pri:0, instance:RestAssuredTestClass.userGroup@5b247367]" started-at="2025-07-17T22:08:23 IST" name="authenticateUser" finished-at="2025-07-17T22:08:24 IST" duration-ms="553" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- authenticateUser -->
+        <test-method signature="updateGroup()[pri:3, instance:RestAssuredTestClass.userGroup@5b247367]" started-at="2025-07-17T22:08:24 IST" name="updateGroup" finished-at="2025-07-17T22:08:25 IST" depends-on-methods="RestAssuredTestClass.userGroup.createUserGroup" duration-ms="610" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateGroup -->
+        <test-method is-config="true" signature="afterResult(org.testng.ITestResult)[pri:0, instance:RestAssuredTestClass.userGroup@5b247367]" started-at="2025-07-17T22:08:25 IST" name="afterResult" finished-at="2025-07-17T22:08:25 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=updateGroup status=SUCCESS method=userGroup.updateGroup()[pri:3, instance:RestAssuredTestClass.userGroup@5b247367] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterResult -->
+        <test-method is-config="true" signature="authenticateUser()[pri:0, instance:RestAssuredTestClass.userGroup@5b247367]" started-at="2025-07-17T22:08:25 IST" name="authenticateUser" finished-at="2025-07-17T22:08:25 IST" duration-ms="652" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- authenticateUser -->
+        <test-method signature="deleteGroup()[pri:4, instance:RestAssuredTestClass.userGroup@5b247367]" started-at="2025-07-17T22:08:25 IST" name="deleteGroup" finished-at="2025-07-17T22:08:26 IST" duration-ms="353" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteGroup -->
+        <test-method is-config="true" signature="afterResult(org.testng.ITestResult)[pri:0, instance:RestAssuredTestClass.userGroup@5b247367]" started-at="2025-07-17T22:08:26 IST" name="afterResult" finished-at="2025-07-17T22:08:26 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=deleteGroup status=SUCCESS method=userGroup.deleteGroup()[pri:4, instance:RestAssuredTestClass.userGroup@5b247367] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterResult -->
+        <test-method is-config="true" signature="authenticateUser()[pri:0, instance:RestAssuredTestClass.userGroup@5b247367]" started-at="2025-07-17T22:08:26 IST" name="authenticateUser" finished-at="2025-07-17T22:08:26 IST" duration-ms="567" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- authenticateUser -->
+        <test-method signature="assignUserToGroup()[pri:5, instance:RestAssuredTestClass.userGroup@5b247367]" started-at="2025-07-17T22:08:26 IST" name="assignUserToGroup" finished-at="2025-07-17T22:08:27 IST" duration-ms="790" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- assignUserToGroup -->
+        <test-method is-config="true" signature="afterResult(org.testng.ITestResult)[pri:0, instance:RestAssuredTestClass.userGroup@5b247367]" started-at="2025-07-17T22:08:27 IST" name="afterResult" finished-at="2025-07-17T22:08:27 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=assignUserToGroup status=SUCCESS method=userGroup.assignUserToGroup()[pri:5, instance:RestAssuredTestClass.userGroup@5b247367] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterResult -->
+        <test-method is-config="true" signature="authenticateUser()[pri:0, instance:RestAssuredTestClass.userGroup@5b247367]" started-at="2025-07-17T22:08:27 IST" name="authenticateUser" finished-at="2025-07-17T22:08:28 IST" duration-ms="555" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- authenticateUser -->
+        <test-method signature="unassignGroup()[pri:6, instance:RestAssuredTestClass.userGroup@5b247367]" started-at="2025-07-17T22:08:28 IST" name="unassignGroup" finished-at="2025-07-17T22:08:28 IST" depends-on-methods="RestAssuredTestClass.userGroup.assignUserToGroup" duration-ms="355" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- unassignGroup -->
+        <test-method is-config="true" signature="afterResult(org.testng.ITestResult)[pri:0, instance:RestAssuredTestClass.userGroup@5b247367]" started-at="2025-07-17T22:08:28 IST" name="afterResult" finished-at="2025-07-17T22:08:28 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=unassignGroup status=SUCCESS method=userGroup.unassignGroup()[pri:6, instance:RestAssuredTestClass.userGroup@5b247367] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterResult -->
+        <test-method is-config="true" signature="closeTest()[pri:0, instance:RestAssuredTestClass.userGroup@5b247367]" started-at="2025-07-17T22:08:28 IST" name="closeTest" finished-at="2025-07-17T22:08:28 IST" duration-ms="530" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeTest -->
+      </class> <!-- RestAssuredTestClass.userGroup -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

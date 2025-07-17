@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test thread-count="5" name="Test">
+		<classes>
+			<!-- <class name="RestAssuredTestClass.getUserDetail"/> <class name="RestAssuredTestClass.createUser"/> 
+				<class name="RestAssuredTestClass.updateUser"/> -->
+			<!-- <class name="RestAssuredTestClass.Users">
+				<methods>
+					<exclude name="getUserDetail" />
+					<exclude name="createUser" />
+					<exclude name="updateUser" />
+					<exclude name="deleteUser" />
+				</methods>
+			</class> -->
+			<class name="RestAssuredTestClass.userGroup">
+				<methods>
+					<include name="createUserGroup" />
+					<include name="updateGroup"/>
+					<include name="deleteGroup"/>
+					<include name="assignUserToGroup"/>
+					<include name="getGroups"/>
+					<include name = "assignUserToGroup"/>
+					<include name="unassignGroup"/>
+				</methods>
+			</class>
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
