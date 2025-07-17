@@ -5,8 +5,8 @@
     <classes>
       <class name="RestAssuredTestClass.userGroup">
         <methods>
-          <include name="unassignGroup"/>
           <include name="authenticateUser"/>
+          <include name="unassignGroup"/>
           <include name="afterResult"/>
           <include name="closeTest"/>
           <include name="setupReport"/>
