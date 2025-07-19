@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="RestAssuredTestClass.getLicenseDetails">
+      <class name="RestAssuredTestClass.verifyResponseHeader">
         <methods>
           <include name="authenticateUser"/>
+          <include name="getLicense"/>
           <include name="afterResult"/>
           <include name="closeTest"/>
-          <include name="sendJson"/>
           <include name="setupReport"/>
         </methods>
-      </class> <!-- RestAssuredTestClass.getLicenseDetails -->
+      </class> <!-- RestAssuredTestClass.verifyResponseHeader -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
