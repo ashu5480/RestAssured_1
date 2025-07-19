@@ -3,16 +3,15 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="RestAssuredTestClass.userGroup">
+      <class name="RestAssuredTestClass.hamcrestAssertion">
         <methods>
           <include name="authenticateUser"/>
-          <include name="unassignGroup"/>
           <include name="afterResult"/>
           <include name="closeTest"/>
+          <include name="numberAssertion"/>
           <include name="setupReport"/>
-          <include name="assignUserToGroup"/>
         </methods>
-      </class> <!-- RestAssuredTestClass.userGroup -->
+      </class> <!-- RestAssuredTestClass.hamcrestAssertion -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

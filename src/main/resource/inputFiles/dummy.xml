@@ -1,0 +1,12 @@
+<employee>
+    <id>101</id>
+    <name>John Doe</name>
+    <department>Engineering</department>
+    <email>john.doe@example.com</email>
+    <salary>75000</salary>
+    <skills>
+        <skill>Java</skill>
+        <skill>RestAssured</skill>
+        <skill>TestNG</skill>
+    </skills>
+</employee>

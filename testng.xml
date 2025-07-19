@@ -3,16 +3,16 @@
 <suite name="Suite">
 	<test thread-count="5" name="Test">
 		<classes>
-			<!-- <class name="RestAssuredTestClass.getUserDetail"/> <class name="RestAssuredTestClass.createUser"/> 
-				<class name="RestAssuredTestClass.updateUser"/> -->
-			<!-- <class name="RestAssuredTestClass.Users">
+			<class name="RestAssuredTestClass.getUserDetail"/> <class name="RestAssuredTestClass.createUser"/> 
+				<class name="RestAssuredTestClass.updateUser"/>
+			<class name="RestAssuredTestClass.Users">
 				<methods>
 					<exclude name="getUserDetail" />
 					<exclude name="createUser" />
 					<exclude name="updateUser" />
 					<exclude name="deleteUser" />
 				</methods>
-			</class> -->
+			</class>
 			<class name="RestAssuredTestClass.userGroup">
 				<methods>
 					<include name="createUserGroup" />
@@ -23,6 +23,23 @@
 					<include name = "assignUserToGroup"/>
 					<include name="unassignGroup"/>
 				</methods>
+			</class>
+			<class name="RestAssuredTestClass.ArrayJSON">
+			  <methods>
+			    <include name="createUser"/>
+			  </methods>
+			</class>
+			<class name="RestAssuredTestClass.hamcrestAssertion">
+			  <methods>
+			   <include name="numberAssertion"/>
+			  </methods>
+			</class>
+			<class name="RestAssuredTestClass.getLicenseDetails">
+			 <methods>
+			  <include name="getLicense"/>
+			  <include name="sendJson"/>
+			  <include name="sendXml"/>
+			 </methods>
 			</class>
 		</classes>
 	</test> <!-- Test -->

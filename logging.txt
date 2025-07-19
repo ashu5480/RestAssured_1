@@ -1,0 +1,50 @@
+Request method:	GET
+Request URI:	https://10.41.4.83/aeengine/rest/licenses/usage?orgCode=BMC
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		X-Session-Token=8bb3386f98ac6a3cb72887bd33b4dc4ac98cf1bd7cc1c0c7f7ba653d9757f084:9b330a30-0283-4ff2-91cd-e30a0beb9c591752927060928
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 
+Server: nginx/1.18.0 (Ubuntu)
+Date: Sat, 19 Jul 2025 12:11:03 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Cache-Control: private
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Trace-Id: 687b8b5714b2a301c2be54c2a197819d
+X-Content-Type-Options: nosniff
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+X-Frame-Options: DENY
+Content-Security-Policy: default-src 'self'; frame-ancestors 'none'
+Referrer-Policy: same-origin
+
+{
+    "customerId": "C704112",
+    "licenseId": "L150070",
+    "startDate": 1735929000000,
+    "endDate": 1767464999000,
+    "licenseType": "DEVELOPMENT",
+    "licenseVersion": 4,
+    "licenseStatus": "VALID",
+    "gracePeriodInDays": 10,
+    "workerThreads": 100,
+    "consumedWorkerThreads": 21,
+    "yearlyNumberOfAssistedAgents": 12,
+    "consumedAssistedAgentLicenses": 1,
+    "yearlyNumberOfStepUnits": 1300,
+    "consumedStepUnits": 325,
+    "yearlyNumberOfProcessStudios": 10,
+    "consumedProcessStudioLicenses": 9,
+    "licenseExpiryNotificationEnabled": true,
+    "inGracePeriod": false
+}

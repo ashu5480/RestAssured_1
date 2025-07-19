@@ -3,7 +3,9 @@ package base.authentication;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.PrintStream;
 import java.sql.Date;
 import java.text.SimpleDateFormat;
 import java.util.Properties;
@@ -41,6 +43,7 @@ public class baseClass {
 	public static Properties prop;
 	public static WebDriver driver;
 	public static String x_session_token;
+	protected PrintStream ps;
 
 	public baseClass() {
 		prop = new Properties();
@@ -48,6 +51,8 @@ public class baseClass {
 			FileInputStream fis = new FileInputStream(
 					"D:\\SeleniumPractice\\RestAssuredFramework\\src\\main\\resource\\config.properties");
 			prop.load(fis);
+			FileOutputStream fos = new FileOutputStream("logging.txt");
+			ps = new PrintStream(fos);
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -92,7 +97,7 @@ public class baseClass {
 				.formParam("username", "ashu").formParam("password", "Pass@123").when().
 				 post("https://10.41.4.83:8443/aeengine/rest/authenticate").then().log().all()
 				.statusCode(200).extract().response();
-		String responseResult = response.asPrettyString();
+		//String responseResult = response.asPrettyString();
 		//System.out.println("Response Result : " + responseResult);
 		x_session_token = response.getHeader("sessionToken");
 		if (x_session_token == null) {
@@ -101,6 +106,13 @@ public class baseClass {
 
 	}
 
+	/*
+	 * public static PrintStream LoggerUtil() { try { FileOutputStream fos = new
+	 * FileOutputStream("logging.txt"); return new PrintStream(fos); } catch
+	 * (Exception e) { throw new RuntimeException("Failed to create log file",e); }
+	 * }
+	 */
+	
 	@AfterMethod
 	public void afterResult(ITestResult result) throws IOException {
 		if (result.getStatus() == ITestResult.SUCCESS) {

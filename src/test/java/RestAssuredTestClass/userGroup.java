@@ -1,13 +1,20 @@
 package RestAssuredTestClass;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintStream;
 import java.util.HashMap;
 import java.util.Map;
 import org.testng.annotations.Test;
 
 import base.authentication.baseClass;
+import groovyjarjarasm.asm.tree.TryCatchBlockNode;
 import io.restassured.RestAssured;
+import io.restassured.filter.log.RequestLoggingFilter;
+import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import net.bytebuddy.implementation.bytecode.Throw;
 
 public class userGroup extends baseClass {
 
@@ -18,9 +25,12 @@ public class userGroup extends baseClass {
 	private static int createdGroupId;
 	
 	@Test(groups = { "getDetails" },priority = 1)
-	public void getGroups() {
+	public void getGroups() throws FileNotFoundException {
+		FileOutputStream fos = new FileOutputStream("logging.text");
+		PrintStream log = new PrintStream(fos);	
 		Response response = RestAssured.given().relaxedHTTPSValidation().header("X-Session-Token", x_session_token)
-				.contentType(ContentType.JSON).when()
+				.contentType(ContentType.JSON).when().filter(RequestLoggingFilter.logRequestTo(log))
+				.filter(ResponseLoggingFilter.logResponseTo(log))
 				.get("https://10.41.4.83:8443/aeengine/rest/tenants/BMC/users/usergroup").then().log().all()
 				.statusCode(200).extract().response();
 		String resString = response.asPrettyString();
@@ -28,18 +38,21 @@ public class userGroup extends baseClass {
 	}
 
 	@Test(priority = 2)
-	public void createUserGroup() {
+	public void createUserGroup() throws FileNotFoundException {
 		/*
 		 * JSONObject jsonData = new JSONObject(); jsonData.put("groupName",
 		 * "RestAssured1"); jsonData.put("description", "test");
 		 */
-
+        FileOutputStream fos = new FileOutputStream("logging.text");
+        PrintStream log = new PrintStream(fos);
+		
 		Map<String, Object> datajson = new HashMap<String, Object>();
 		datajson.put("groupName", "RestAssured4");
 		datajson.put("description", "RestAssured1");
 
 		Response response = RestAssured.given().log().all().relaxedHTTPSValidation()
-				.headers("X-Session-Token", x_session_token).contentType(ContentType.JSON).body(datajson).when()
+				.headers("X-Session-Token", x_session_token).contentType(ContentType.JSON).body(datajson)
+				.filter(RequestLoggingFilter.logRequestTo(log)).filter(ResponseLoggingFilter.logResponseTo(log)).when()
 				.post("https://10.41.4.83:8443/aeengine/rest/tenants/BMC/groups").then().log().all().statusCode(200)
 				.extract().response();
 		String resString = response.asPrettyString();
@@ -51,6 +64,7 @@ public class userGroup extends baseClass {
 	@Test(dependsOnMethods = {"createUserGroup"},priority = 3)
 	public void updateGroup() {
 		// RestAssured.basePath=prop.getProperty("basePath");
+		
 		Map<String, Object> dataJson = new HashMap<String, Object>();
 		dataJson.put("groupName", "RestAssured3");
 		dataJson.put("description", "updated description 1");
